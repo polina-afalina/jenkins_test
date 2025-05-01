@@ -44,7 +44,7 @@ public class Mesto1Test {
         // Получение списка фотографий и выбор первой из него
         return given()
                 .auth().oauth2(bearerToken) // Передаём токен для аутентификации
-                .get("/api/card") // Делаем GET-запрос
+                .get("/api/cards") // Делаем GET-запрос
                 .then().extract().body().path("data[0]._id"); // Получаем ID фотографии из массива данных
     }
 
